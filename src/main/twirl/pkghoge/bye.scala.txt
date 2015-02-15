@@ -1,0 +1,4 @@
+@(name:String, age:Int)
+## sample002 ##
+私は@(name),@(age)歳です sayonara
+

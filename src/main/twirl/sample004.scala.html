@@ -1,0 +1,19 @@
+@import how2twirl.Customer
+@import how2twirl.Order
+@(customer:Customer, orders:List[Order], title:String="MYTITLE")
+
+@***********************
+* reusable block
+***********************@
+@block(order:Order) = {
+  <li>ORDER_TITLE: @order.title</li>
+}
+
+## sample004 ##
+<h1>Welcome @(customer.name + " " + customer.name)! - @title</h1>
+<ul>
+@for(order <- orders){
+	@block(order)
+}
+</ul>
+
